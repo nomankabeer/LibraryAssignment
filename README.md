@@ -1,0 +1,2 @@
+# PureLogicsAssignment
+Pure login task
