@@ -5,18 +5,15 @@
 Migrations - DB Seeders - Routes - Middleware - Eloquent - Eager Loading - Relationships - Repositoy Design Pattern.
 
 # Clone This Project
+create a database with name "purelogicsassignment" <br/><br/>
 Run the following Commands in terminal <br/>
 git clone https://github.com/nomankabeer/PureLogicsAssignment <br/>
+cp .env.example .env <br/>
 php artisan migrate <br/>
 php artisan db:seed <br/>
 composer install <br/>
 npm install <br/>
 npm run dev <br/>
-
-# Set .env file
-Run the following Commands in terminal <br/>
-cp .env.example .env <br/>
-create a database with name "purelogicsassignment" <br/>
 
 # Run this project
 Run the following Commands in terminal <br/>
