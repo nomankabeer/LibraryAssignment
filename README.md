@@ -36,10 +36,10 @@ resources\views\layouts <br /><br />
 database\migrations <br />
 database\seeds <br /> <br />
 
-App\Repositoories <br /><br />
+App\Repositories <br /><br />
 
-App\Books <br />
-App\Racks <br /><br />
+App\Books.php <br />
+App\Racks.php <br /><br />
 
 App\Http\Controller\Admin <br />
 App\Http\Controller\Client <br />
