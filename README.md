@@ -26,8 +26,23 @@ Password: 1234 <br/><br/>
 Email: admin@gmail.com <br />
 Password: 1234 <br/>
 
-# Worked on follwing files.
-routes\web.php <br/>
+# Worked on follwing files/folder.
+routes\web.php <br/><br/>
+resources\views\admin <br />
+resources\views\client <br />
+resources\views\includes <br />
+resources\views\layouts <br /><br />
+
+database\migrations <br />
+database\seeds <br /> <br />
+
+App\Repositoories <br /><br />
+
+App\Books <br />
+App\Racks <br /><br />
+
+App\Http\Controller\Admin <br />
+App\Http\Controller\Client <br />
 
   
 
