@@ -38,10 +38,9 @@
  * 12
  */
 
-Route::get('/home' , 'HomeController@index' );
-Route::redirect('/' , '/home');
-
 Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
+Route::redirect('/' , '/home');
 Route::group([
     'middleware' => ['auth' , 'admin'],
     'namespace' => 'admin',
@@ -52,17 +51,17 @@ Route::group([
         Route::get('racks', 'RackController@getRacks')->name('get.racks');
         Route::get('rack/create', 'RackController@createRack')->name('rack.create');
         Route::post('rack/store', 'RackController@storeRack')->name('rack.store');
-        Route::post('rack/update/{id}', 'RackController@updateRack')->name('rack.update');
-        Route::get('rack/edit/{id}', 'RackController@editRack')->name('rack.edit');
-        Route::get('rack/detail/{id}', 'RackController@detailRack')->name('rack.detail');
-        Route::get('racks/delete/{id}', 'RackController@deleteRack')->name('rack.delete');
+        Route::post('rack/update/{id}', 'RackController@updateRack')->name('rack.update')->where('id' , '[0-9]+');
+        Route::get('rack/edit/{id}', 'RackController@editRack')->name('rack.edit')->where('id' , '[0-9]+');
+        Route::get('rack/detail/{id}', 'RackController@detailRack')->name('rack.detail')->where('id' , '[0-9]+');
+        Route::get('racks/delete/{id}', 'RackController@deleteRack')->name('rack.delete')->where('id' , '[0-9]+');
 
 
         Route::get('book/create/{rack_id}', 'BookController@createBook')->name('book.create');
         Route::post('book/store', 'BookController@storeBook')->name('book.store');
-        Route::post('book/update/{id}', 'BookController@updateBook')->name('book.update');
-        Route::get('book/edit/{id}', 'BookController@editBook')->name('book.edit');
-        Route::get('book/delete/{id}', 'BookController@deleteBook')->name('book.delete');
+        Route::post('book/update/{id}', 'BookController@updateBook')->name('book.update')->where('id' , '[0-9]+');
+        Route::get('book/edit/{id}', 'BookController@editBook')->name('book.edit')->where('id' , '[0-9]+');
+        Route::get('book/delete/{id}', 'BookController@deleteBook')->name('book.delete')->where('id' , '[0-9]+');
     });
 
 
@@ -74,12 +73,10 @@ Route::group([
 ] , function(){
 
     Route::get('racks', 'RackController@getRacks')->name('get.racks');
-    Route::get('rack/detail/{id}', 'RackController@detailRack')->name('rack.detail');
+    Route::get('rack/detail/{id}', 'RackController@detailRack')->name('rack.detail')->where('id' , '[0-9]+');
 
     Route::get('search/book', 'BookController@searchBookView')->name('search.book');
     Route::post('search/book', 'BookController@searchBook')->name('search.book');
 
 });
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
