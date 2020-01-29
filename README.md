@@ -1,5 +1,4 @@
-# PureLogicsAssignment
-# This Assignment is done in 7+ Hours in Laravel.
+# Library Assignment
 
 # Topic Covered
 Migrations - DB Seeders - Routes - Middleware - Eloquent - Eager Loading - Relationships - Repositoy Design Pattern.
